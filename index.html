@@ -3318,6 +3318,9 @@
       /* ---------- Interactive Guestbook Logic (LocalStorage + Cloud Sync + URL Magic Link + Direct Delivery) ---------- */
       var GB_STORAGE_KEY = 'hossam_dina_guestbook_v2';
       var GB_CONFIG_KEY = 'hossam_dina_gb_cloud_cfg_v1';
+      var GB_SEALS = ['#5A1828', '#D9A6AA', '#C2A36B'];
+      var GB_MAX_NAME = 80, GB_MAX_MSG = 600;
+      var gbLastSync = 0;
 
       /* ضع هنا رابط Google Apps Script Web App لتسجيل التهاني تلقائياً في شيت الإكسل في الخلفية */
       var GOOGLE_SHEETS_SCRIPT_URL = '';
@@ -3409,13 +3412,17 @@
             seen[sig] = true;
             out.push({
               id: it.id || ('gb-' + (it.ts || Date.now()) + '-' + i),
-              name: String(it.name).trim(),
-              seal: it.seal || '#5A1828',
-              msg: String(it.msg).trim(),
-              ts: Number(it.ts) || Date.now()
+              name: String(it.name).trim().slice(0, GB_MAX_NAME),
+              seal: GB_SEALS.indexOf(it.seal) !== -1 ? it.seal : '#5A1828',
+              msg: String(it.msg).trim().slice(0, GB_MAX_MSG),
+              ts: Number(it.ts) || Date.now(),
+              /* pending = لسه ما اتأكدش إنها وصلت للسيرفر، هتتبعت تاني تلقائيًا */
+              pending: !!it.pending
             });
           }
         }
+        /* الأحدث فوق */
+        out.sort(function (a, b) { return b.ts - a.ts; });
         return out;
       }
 
@@ -3494,22 +3501,28 @@
         } catch (e) { }
       }
 
-      function syncWithCloudEndpoint(newEntryOptional) {
+      /* بيبعت أي تهنئة لسه pending للسيرفر (الجديدة + اللي فشلت قبل كده)، وبعدين بيسحب القائمة الكاملة */
+      function syncWithCloudEndpoint() {
         var url = (gbCloudConfig.cloudUrl || '').trim();
         if (!url) return Promise.resolve(false);
+        gbLastSync = Date.now();
 
-        var postPromise = Promise.resolve();
-        if (newEntryOptional) {
-          var isGas = url.indexOf('script.google.com') !== -1;
-          postPromise = fetch(url, {
-            method: 'POST',
-            mode: isGas ? 'no-cors' : 'cors',
-            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-            body: JSON.stringify(newEntryOptional)
-          }).catch(function (err) {
-            console.warn('Sync post warning:', err);
+        var isGas = url.indexOf('script.google.com') !== -1;
+        var pendingList = guestbookEntries.filter(function (it) { return it.pending; });
+
+        /* بنبعتهم واحدة ورا التانية، والسيرفر بيتجاهل أي id مكرر فمفيش مشكلة لو اتبعتت مرتين */
+        var postPromise = pendingList.reduce(function (chain, it) {
+          return chain.then(function () {
+            return fetch(url, {
+              method: 'POST',
+              mode: isGas ? 'no-cors' : 'cors',
+              headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+              body: JSON.stringify({ id: it.id, name: it.name, seal: it.seal, msg: it.msg, ts: it.ts })
+            }).catch(function (err) {
+              console.warn('Sync post warning:', err);
+            });
           });
-        }
+        }, Promise.resolve());
 
         return postPromise.then(function () {
           return fetch(url, { method: 'GET', cache: 'no-store' });
@@ -3685,7 +3698,14 @@
           ? ['م', 'اسم المهنئ', 'نص التهنئة المباركة', 'تاريخ الإرسال', 'وقت الإرسال']
           : ['#', 'Guest Name', 'Wedding Wish', 'Date', 'Time'];
 
-        var rows = [headers.map(function (h) { return '"' + String(h).replace(/"/g, '""') + '"'; }).join(',')];
+        /* الأسماء والتهاني دلوقتي جاية من ناس تانية، فبنمنع أي خلية تبدأ بـ = + - @ من إنها تتحول لمعادلة في إكسل */
+        function csvCell(val) {
+          var s = String(val == null ? '' : val);
+          if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+          return '"' + s.replace(/"/g, '""') + '"';
+        }
+
+        var rows = [headers.map(csvCell).join(',')];
 
         guestbookEntries.forEach(function (item, idx) {
           var dt = new Date(item.ts || Date.now());
@@ -3698,7 +3718,7 @@
             dStr,
             tStr
           ];
-          rows.push(r.map(function (val) { return '"' + String(val).replace(/"/g, '""') + '"'; }).join(','));
+          rows.push(r.map(csvCell).join(','));
         });
 
         var blob = new Blob([BOM + rows.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
@@ -3926,7 +3946,8 @@
           name: nameIn.value.trim(),
           seal: selectedSeal,
           msg: msgIn.value.trim(),
-          ts: Date.now()
+          ts: Date.now(),
+          pending: true
         };
         lastSubmittedWish = newWish;
         guestbookEntries = mergeGuestbookLists([newWish], guestbookEntries);
@@ -3934,7 +3955,7 @@
         if (gbChannel) {
           try { gbChannel.postMessage({ type: 'NEW_WISH', entry: newWish }); } catch (err) { }
         }
-        syncWithCloudEndpoint(newWish);
+        syncWithCloudEndpoint();
 
         nameIn.value = ''; msgIn.value = '';
         var alertBox = $('#gb-filter-alert');
@@ -3957,8 +3978,14 @@
       loadLocalGuestbook();
       importWishFromUrlIfPresent();
       syncWithCloudEndpoint();
+      /* لو النت رجع بعد ما كان فاصل، نبعت أي تهنئة كانت معلقة */
+      window.addEventListener('online', function () { syncWithCloudEndpoint(); });
 
-      function openGuestbook() { $('#guestbook-modal').hidden = false; }
+      function openGuestbook() {
+        $('#guestbook-modal').hidden = false;
+        /* نجيب تهاني الضيوف التانيين كل ما السجل يتفتح (بحد أدنى 15 ثانية بين كل مرة) */
+        if (Date.now() - gbLastSync > 15000) syncWithCloudEndpoint();
+      }
       function closeGuestbook() { $('#guestbook-modal').hidden = true; }
       $('#guestbook-cta-btn').addEventListener('click', openGuestbook);
       $('#top-guestbook-btn').addEventListener('click', openGuestbook);
