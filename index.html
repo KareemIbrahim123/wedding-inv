@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" dir="ltr" class="is-locked">
 
 <head>
@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>حسام &amp; دينا | دعوة زفاف — Hossam &amp; Dina</title>
   <meta name="description"
-    content="يسعدنا دعوتكم لحضور حفل زفاف حسام &amp; دينا — الأربعاء ١١ نوفمبر ٢٠٢٦، قاعة مارلي | Hossam &amp; Dina's wedding — Wednesday 11 November 2026, Marly Hall">
+    content="يسعدنا دعوتكم لحضور حفل زفاف حسام &amp; دينا — الأربعاء ١١ نوفمبر ٢٠٢٦، رأس البر | Hossam &amp; Dina's wedding — Wednesday 11 November 2026, رأس البر">
   <meta name="theme-color" content="#5A1828">
 
   <!-- Social Link Preview Metadata (WhatsApp / Facebook) -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="حسام &amp; دينا — دعوة زفاف | Hossam &amp; Dina">
   <meta property="og:description"
-    content="الأربعاء ١١ نوفمبر ٢٠٢٦ · قاعة مارلي — Wednesday, 11 November 2026 · Marly Hall">
+    content="الأربعاء ١١ نوفمبر ٢٠٢٦ · رأس البر — Wednesday, 11 November 2026 · رأس البر">
   <meta property="og:locale" content="ar_EG">
   <meta property="og:locale:alternate" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
@@ -91,21 +91,6 @@
 
     html.is-locked {
       overflow: hidden;
-    }
-
-    /* iOS Safari modal scroll lock */
-    html.is-locked body {
-      overflow: hidden;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-    }
-
-    html.modal-open body {
-      overflow: hidden;
-      position: fixed;
-      width: 100%;
     }
 
     body {
@@ -1680,27 +1665,24 @@
       -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       justify-content: center;
       padding: 16px;
       overflow-y: auto;
-      overflow-x: hidden;
-      -webkit-overflow-scrolling: touch;
-      overscroll-behavior: contain;
     }
 
     .modal-card {
       position: relative;
       width: 100%;
       max-width: 720px;
+      max-height: 90vh;
+      overflow-y: auto;
       background: var(--grain), linear-gradient(180deg, #FFFCF8, #F8F4ED);
       color: var(--burgundy);
       border: 2px solid var(--gold);
       border-radius: 26px;
       padding: clamp(24px, 5vw, 44px);
       box-shadow: 0 32px 80px rgba(0, 0, 0, 0.78);
-      /* Let the backdrop handle scrolling, not the card */
-      margin: auto;
     }
 
     .modal-close {
@@ -1799,84 +1781,6 @@
       font-size: .76rem;
       color: var(--bordeaux);
       opacity: .82;
-    }
-
-    .gb-sync-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 10px 0 14px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: rgba(90, 24, 40, 0.06);
-      border: 1px solid rgba(194, 163, 107, 0.45);
-      font-size: .82rem;
-      color: var(--burgundy);
-    }
-
-    .gb-sync-dot {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #16A34A;
-      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2);
-      margin-inline-end: 6px;
-    }
-
-    .gb-sync-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .gb-mini-btn {
-      padding: 4px 11px;
-      border-radius: 999px;
-      border: 1px solid var(--gold);
-      background: var(--pearl);
-      color: var(--burgundy);
-      font-family: var(--f-sans);
-      font-size: .66rem;
-      letter-spacing: .08em !important;
-      cursor: pointer;
-      transition: background .2s, color .2s;
-    }
-
-    .gb-mini-btn:hover {
-      background: var(--burgundy);
-      color: var(--pearl);
-    }
-
-    .gb-delivery-banner {
-      margin-bottom: 16px;
-      padding: 16px 18px;
-      border-radius: 16px;
-      background: linear-gradient(180deg, #FFFCF8, #F6EFE6);
-      border: 1.5px solid var(--gold);
-      box-shadow: 0 14px 32px -18px rgba(90, 24, 40, 0.28);
-    }
-
-    .gb-cloud-drawer {
-      margin-bottom: 16px;
-      padding: 16px 18px;
-      border-radius: 16px;
-      background: rgba(255, 252, 248, 0.96);
-      border: 1px dashed var(--burgundy);
-      font-size: .92rem;
-      color: var(--burgundy);
-    }
-
-    .gb-entry-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-      padding-top: 6px;
-      border-top: 1px dashed rgba(194, 163, 107, 0.35);
     }
 
     .gb-seal-picker {
@@ -2088,8 +1992,8 @@
       <div class="env-subtitle-rule" aria-hidden="true">
         <i></i>
         <span>
-          <span data-l="ar">الأربعاء ١١ نوفمبر ٢٠٢٦ • قاعة مارلي</span>
-          <span data-l="en">Wednesday, 11 November 2026 • Marly Hall</span>
+          <span data-l="ar">الأربعاء ١١ نوفمبر ٢٠٢٦ • رأس البر</span>
+          <span data-l="en">Wednesday, 11 November 2026 • رأس البر</span>
         </span>
         <i></i>
       </div>
@@ -2114,7 +2018,7 @@
             aria-label="Inspect vintage photograph">
             <div class="stamp-inner">
               <div class="stamp-top-meta">
-                <span>EDITION • MARLY</span>
+                <span>EDITION • رأس البر</span>
                 <span>11.11.26</span>
               </div>
               <div class="stamp-photo-box">
@@ -2148,8 +2052,8 @@
             </div>
 
             <p class="arched-card-venue">
-              <span data-l="ar">قاعة مارلي • الأربعاء ١١ نوفمبر ٢٠٢٦</span>
-              <span data-l="en">Marly Hall • 11 November 2026</span>
+              <span data-l="ar">رأس البر • الأربعاء ١١ نوفمبر ٢٠٢٦</span>
+              <span data-l="en">رأس البر • 11 November 2026</span>
             </p>
 
             <p class="arched-card-follow">
@@ -2296,8 +2200,8 @@
         <!-- Large Romantic Burgundy Calligraphy Venue Showcase -->
         <div class="venue-calligraphy-showcase" data-reveal>
           <h3 class="venue-calligraphy-text">
-            <span data-l="ar">قاعة مارلي</span>
-            <span data-l="en">Marly Hall</span>
+            <span data-l="ar">رأس البر</span>
+            <span data-l="en">رأس البر</span>
           </h3>
         </div>
 
@@ -2418,20 +2322,20 @@
               <circle cx="24" cy="21" r="4.5" />
             </svg>
             <span class="t"><span data-l="ar">المكان</span><span data-l="en">Venue</span></span>
-            <span class="v"><span data-l="ar">قاعة مارلي</span><span data-l="en">Marly Hall</span></span>
-            <span class="s"><span data-l="ar">رأس البر</span><span data-l="en">Grand Ballroom</span></span>
+            <span class="v"><span data-l="ar">رأس البر</span><span data-l="en">رأس البر</span></span>
+            <span class="s"><span data-l="ar">دمياط الجديدة</span><span data-l="en">Grand Ballroom</span></span>
           </div>
         </div>
 
         <div class="map-frame" id="map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.8547704806724!2d31.808614799999997!3d31.5006755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f9fbc61eeb8f9f%3A0x4d26f214f1988dff!2z2YLYp9i52Kkg2YXYp9ix2YTZiSBNYXJseSBoYWxs!5e0!3m2!1sen!2seg!4v1793606704058!5m2!1sen!2seg"
-            title="Marly Hall — map" allowfullscreen="" loading="lazy"
+            src="https://maps.google.com/maps?q=Ras+El+Bar,+Damietta+Governorate,+Egypt&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+            title="رأس البر — map" allowfullscreen="" loading="lazy"
             referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
 
         <div class="btn-row" data-reveal>
-          <a class="btn" href="https://maps.google.com/?cid=5559396961802030591" target="_blank" rel="noopener">
+          <a class="btn" href="https://maps.google.com/?q=Ras+El+Bar,+Damietta+Governorate,+Egypt" target="_blank" rel="noopener">
             <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
               stroke-linejoin="round" aria-hidden="true">
               <path d="M24 43S11 30.8 11 21a13 13 0 0 1 26 0c0 9.8-13 22-13 22z" />
@@ -2439,7 +2343,7 @@
             </svg>
             <span><span data-l="ar">افتح الخريطة</span><span data-l="en">Open in Maps</span></span>
           </a>
-          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=31.5006755,31.8086148"
+          <a class="btn btn--ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=Ras+El+Bar,+Damietta+Governorate,+Egypt"
             target="_blank" rel="noopener">
             <span><span data-l="ar">الاتجاهات</span><span data-l="en">Get Directions</span></span>
           </a>
@@ -2577,8 +2481,8 @@
 
         <span
           style="font-family:var(--f-sans);font-size:.58rem;letter-spacing:.32em!important;text-transform:uppercase;color:var(--blush);margin-top:4px">
-          <span data-l="ar">قاعة مارلي</span>
-          <span data-l="en">MARLY HALL</span>
+          <span data-l="ar">رأس البر</span>
+          <span data-l="en">رأس البر</span>
         </span>
 
         <div class="emblem-monogram">
@@ -2627,106 +2531,12 @@
         </h3>
       </div>
 
-      <!-- Cloud Persistence & Couple Sync Bar -->
-      <div class="gb-sync-bar">
-        <div>
-          <span class="gb-sync-dot" id="gb-sync-dot"></span>
-          <span id="gb-sync-status-text" style="font-family:var(--f-ar);direction:rtl">
-            حفظ دائم ومزامنة سحابية لسجل العروسين (<strong id="gb-count-badge">3</strong> تهنئة)
-          </span>
-        </div>
-        <div class="gb-sync-actions">
-          <button type="button" class="gb-mini-btn" id="gb-sync-now-btn">🔄 Sync</button>
-          <button type="button" class="gb-mini-btn" id="gb-export-btn">📥 Export</button>
-          <button type="button" class="gb-mini-btn" id="gb-cloud-setup-btn">⚙ إعدادات العروسين</button>
-        </div>
-      </div>
-
-      <!-- Bride & Groom Cloud Endpoint / Google Sheets / WhatsApp Configuration Drawer -->
-      <div class="gb-cloud-drawer" id="gb-cloud-drawer" hidden>
-        <div style="direction:rtl;font-family:var(--f-ar);margin-bottom:12px">
-          <strong style="font-size:1.08rem;color:var(--burgundy)">⚙ ربط جدول Google Sheet الرسمي لسجل تهاني حسام
-            ودينا:</strong>
-          <p style="color:var(--bordeaux);font-size:.95rem;line-height:1.65;margin-top:4px">
-            تم إنشاء جدول <strong>Google Sheet</strong> الخاص بكم وتجهيزه بالكامل! افتح الجدول من الزر بالأسفل، ومن
-            قائمة <code>Extensions &gt; Apps Script</code> اضغط <strong>Deploy &gt; New deployment &gt; Web app
-              (Anyone)</strong> ثم الصق رابط الـ Web App هنا لتعمل المزامنة التلقائية الفورية على كل الهواتف:
-          </p>
-          <div style="margin-top:8px;display:flex;flex-wrap:wrap;gap:8px">
-            <a class="gb-mini-btn"
-              href="https://docs.google.com/spreadsheets/d/1QakC1YTmgq2HTeZIOapWBgh3dD7Xhol5X2uXBlkQlnM/edit"
-              target="_blank" rel="noopener"
-              style="background:var(--burgundy);color:var(--pearl);text-decoration:none;display:inline-flex;align-items:center;gap:6px">
-              <span>📊 فتح جدول Google Sheet الخاص بحسام ودينا</span>
-            </a>
-            <button type="button" class="gb-mini-btn" id="gb-copy-all-sync-link-btn">
-              <span>🔗 نسخ رابط مزامنة كل التهاني للعروسين</span>
-            </button>
-          </div>
-        </div>
-        <div class="gb-grid" style="margin-bottom:10px">
-          <div>
-            <label class="gb-label" for="gb-cloud-url">Google Apps Script Web App URL / Firebase (.json)</label>
-            <input class="gb-input" id="gb-cloud-url" type="url"
-              placeholder="https://script.google.com/macros/s/.../exec">
-          </div>
-          <div>
-            <label class="gb-label" for="gb-couple-wa">Bride &amp; Groom WhatsApp (Optional)</label>
-            <input class="gb-input" id="gb-couple-wa" type="tel" placeholder="2010XXXXXXXX">
-          </div>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;align-items:center">
-          <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <button type="button" class="gb-mini-btn" id="gb-save-cloud-cfg-btn"
-              style="background:var(--burgundy);color:var(--pearl)">
-              💾 حفظ الإعدادات ومزامنة
-            </button>
-            <button type="button" class="gb-mini-btn" id="gb-copy-gas-btn">
-              📋 نسخ كود Google Sheet المجاني (10 ثواني)
-            </button>
-          </div>
-          <button type="button" class="gb-mini-btn" id="gb-close-cloud-cfg-btn">إغلاق</button>
-        </div>
-      </div>
-
-      <!-- Instant Delivery Banner After Guest Posts a Wish -->
-      <div class="gb-delivery-banner" id="gb-delivery-banner" hidden>
-        <div style="direction:rtl;text-align:right;font-family:var(--f-ar);margin-bottom:10px">
-          <strong style="color:var(--burgundy);font-size:1.15rem">💌 تم ختم تهنئتك وحفظها! أرسلها الآن مباشرةً لحسام
-            ودينا:</strong>
-          <p style="color:var(--bordeaux);font-size:.98rem;line-height:1.6;margin-top:2px">
-            حتى يراها العروسان فورًا على هواتفهم ويتم إضافتها لسجلهم الخاص بضغطة واحدة:
-          </p>
-        </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end">
-          <button type="button" class="btn" id="gb-deliver-wa-btn" style="padding:9px 18px;font-size:.72rem">
-            <span>📲 إرسال التهنئة لواتساب العروسين</span>
-          </button>
-          <button type="button" class="btn btn--ghost" id="gb-deliver-link-btn"
-            style="padding:9px 16px;font-size:.72rem">
-            <span>🔗 نسخ رابط التهنئة المختومة للعروسين</span>
-          </button>
-          <button type="button" class="btn btn--ghost" id="gb-deliver-card-btn"
-            style="padding:9px 16px;font-size:.72rem">
-            <span>🖼 تحميل بطاقة التهنئة كصورة</span>
-          </button>
-        </div>
-      </div>
-
       <form class="gb-form" id="gb-form">
-        <div class="gb-grid">
-          <div>
-            <label class="gb-label" for="gb-name">
-              <span data-l="ar">الاسم *</span><span data-l="en">Your Name(s) *</span>
-            </label>
-            <input class="gb-input" id="gb-name" type="text" required placeholder="أحمد وسارة / Ahmed &amp; Sara">
-          </div>
-          <div>
-            <label class="gb-label" for="gb-city">
-              <span data-l="ar">المدينة / صلة القرابة</span><span data-l="en">City / Relation</span>
-            </label>
-            <input class="gb-input" id="gb-city" type="text" placeholder="القاهرة / Cairo">
-          </div>
+        <div style="margin-bottom:14px">
+          <label class="gb-label" for="gb-name">
+            <span data-l="ar">الاسم الكريم *</span><span data-l="en">Your Name *</span>
+          </label>
+          <input class="gb-input" id="gb-name" type="text" required placeholder="اكتب اسمك الكريم هنا...">
         </div>
 
         <div style="margin-bottom:14px">
@@ -2736,26 +2546,23 @@
           <textarea class="gb-textarea" id="gb-msg" rows="3" required
             placeholder="بارك الله لكما وبارك عليكما وجمع بينكما في خير..."></textarea>
           <div class="gb-filter-badge">
-            <span style="direction:rtl;font-family:var(--f-ar)">🛡 محمي بفلتر ذكي لمنع الألفاظ الخارجة والمعاكسات</span>
-            <span>Smart Etiquette &amp; Profanity Filter Active</span>
+            <span style="direction:rtl;font-family:var(--f-ar)">🛡 محمي بفلتر ذكي لمنع الألفاظ الخارجة</span>
+            <span>Smart Etiquette Filter Active</span>
           </div>
         </div>
 
         <div class="gb-filter-alert" id="gb-filter-alert" role="alert" hidden>
           <div style="direction:rtl;font-family:var(--f-ar);font-weight:700;margin-bottom:2px" id="gb-alert-ar">
-            عذرًا، لا يُسمح بنشر الرسائل التي تحتوي على ألفاظ غير لائقة أو شتائم أو معاكسات. نرجو كتابة تهنئة تليق
-            بالعروسين.
+            عذرًا، لا يُسمح بنشر الرسائل التي تحتوي على ألفاظ غير لائقة أو معاكسات. نرجو كتابة تهنئة تليق بالعروسين.
           </div>
           <div style="font-family:var(--f-en);font-size:.9rem" id="gb-alert-en">
-            Please keep your message respectful. Profanity, slang insults, catcalling, and unsolicited phone numbers are
-            not permitted.
+            Please keep your message respectful. Inappropriate content is not permitted.
           </div>
         </div>
 
         <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px">
           <div class="gb-seal-picker" id="gb-seal-picker">
-            <span class="gb-label" style="margin:0"><span data-l="ar">لون الختم:</span><span data-l="en">Wax
-                Seal:</span></span>
+            <span class="gb-label" style="margin:0"><span data-l="ar">لون الختم:</span><span data-l="en">Wax Seal:</span></span>
             <button type="button" class="seal-chip is-active" data-seal="#5A1828">
               <i class="seal-dot" style="background:#5A1828"></i>
               <span><span data-l="ar">عنابي ملكي</span><span data-l="en">Burgundy</span></span>
@@ -2777,6 +2584,13 @@
       </form>
 
       <div class="gb-entries" id="gb-entries-list"></div>
+
+      <div style="margin-top:20px;text-align:center;padding:14px 0 4px;border-top:1px dashed rgba(194,163,107,0.35)">
+        <button type="button" id="gb-export-excel-btn" class="btn btn-outline" style="font-size:0.92rem;padding:8px 18px;border-radius:10px;cursor:pointer">
+          <span style="font-size:1.1rem">📊</span>
+          <span><span data-l="ar">تحميل سجل التهاني في ملف إكسل (Excel)</span><span data-l="en">Download Wishes to Excel (.csv)</span></span>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -2853,7 +2667,7 @@
       var opened = false;
       var lenis = null;
 
-      /* ---------- Event Data (Hossam & Dina — 11 November 2026, Marly Hall) ---------- */
+      /* ---------- Event Data (Hossam & Dina — 11 November 2026, رأس البر) ---------- */
       var EVENT = {
         start: Date.parse('2026-11-11T18:00:00+02:00'),
         end: Date.parse('2026-11-11T23:00:00+02:00'),
@@ -2863,12 +2677,12 @@
 
       var T = {
         ar: {
-          share: 'دعوة لحضور حفل زفاف حسام & دينا — الأربعاء ١١ نوفمبر ٢٠٢٦، قاعة مارلي',
+          share: 'دعوة لحضور حفل زفاف حسام & دينا — الأربعاء ١١ نوفمبر ٢٠٢٦، رأس البر',
           copied: 'تم نسخ رابط الدعوة بنجاح',
           igCopied: 'تم نسخ الرابط — الصقه في ستوري أو رسالة على إنستجرام',
           fail: 'تعذّر النسخ، انسخ الرابط يدويًا',
           calTitle: 'حفل زفاف حسام & دينا',
-          calLoc: 'قاعة مارلي - Marly Hall',
+          calLoc: 'رأس البر - رأس البر',
           calDesc: 'يسعدنا حضوركم ومشاركتنا أجمل أيام العمر',
           mute: 'كتم الموسيقى',
           unmute: 'تشغيل الموسيقى',
@@ -2877,12 +2691,12 @@
           gbSaved: 'تم ختم تهنئتكم وإضافتها إلى سجل العروسين ♥'
         },
         en: {
-          share: 'You are invited to the wedding of Hossam & Dina — Wednesday, 11 November 2026, Marly Hall',
+          share: 'You are invited to the wedding of Hossam & Dina — Wednesday, 11 November 2026, رأس البر',
           copied: 'Invitation link copied to clipboard',
           igCopied: 'Link copied — paste it into an Instagram story or message',
           fail: "Couldn't copy — please copy the link manually",
           calTitle: "Hossam & Dina's Wedding",
-          calLoc: 'Marly Hall - قاعة مارلي',
+          calLoc: 'رأس البر - رأس البر',
           calDesc: 'We joyfully invite you to celebrate our wedding',
           mute: 'Mute music',
           unmute: 'Play music',
@@ -3152,7 +2966,7 @@
 
         ctx.fillStyle = '#76283B';
         ctx.font = 'italic 500 25px "Cormorant Garamond", Georgia, serif';
-        ctx.fillText('Marly Hall • 11 November 2026', W / 2, cardY + 392);
+        ctx.fillText('رأس البر • 11 November 2026', W / 2, cardY + 392);
 
         ctx.fillStyle = '#5A1828';
         ctx.font = '500 16px Montserrat, sans-serif';
@@ -3219,7 +3033,7 @@
 
         ctx.fillStyle = isBurgundy ? '#F1DDE0' : '#5A1828';
         ctx.font = '400 60px "Great Vibes", serif';
-        ctx.fillText('Marly Hall  •  قاعة مارلي', W / 2, 1735);
+        ctx.fillText('رأس البر  •  رأس البر', W / 2, 1735);
 
         ctx.fillStyle = '#C2A36B';
         ctx.font = '500 22px "Playfair Display", serif';
@@ -3505,20 +3319,18 @@
       var GB_STORAGE_KEY = 'hossam_dina_guestbook_v2';
       var GB_CONFIG_KEY = 'hossam_dina_gb_cloud_cfg_v1';
 
-      /* Default Cloud Config: Bride & Groom can paste a Google Apps Script URL or Firebase Realtime DB (.json) URL here or via the UI */
-      var COUPLE_GOOGLE_SHEET_ID = '1QakC1YTmgq2HTeZIOapWBgh3dD7Xhol5X2uXBlkQlnM';
-      var COUPLE_GOOGLE_SHEET_URL = 'https://docs.google.com/spreadsheets/d/1QakC1YTmgq2HTeZIOapWBgh3dD7Xhol5X2uXBlkQlnM/edit';
+      /* ضع هنا رابط Google Apps Script Web App لتسجيل التهاني تلقائياً في شيت الإكسل في الخلفية */
+      var GOOGLE_SHEETS_SCRIPT_URL = '';
       var gbCloudConfig = {
-        cloudUrl: '',
+        cloudUrl: GOOGLE_SHEETS_SCRIPT_URL,
         coupleWa: '',
-        sheetId: COUPLE_GOOGLE_SHEET_ID
+        sheetId: ''
       };
 
       var defaultGuestbookEntries = [
         {
           id: 'seed-1',
           name: 'The Family',
-          city: 'Cairo, Egypt',
           seal: '#5A1828',
           msg: 'بارك الله لكما وبارك عليكما وجمع بينكما في خير، ألف مبروك لأجمل عروسين حسام ودينا!',
           ts: 1762000001000
@@ -3526,15 +3338,13 @@
         {
           id: 'seed-2',
           name: 'Nour & Karim El-Masry',
-          city: 'Alexandria, Egypt',
           seal: '#C2A36B',
-          msg: 'اللهم بارك لهما وأدم بينهما المودة والرحمة، فرحتنا لا توصف وبانتظار يوم ١١ نوفمبر في قاعة مارلي!',
+          msg: 'اللهم بارك لهما وأدم بينهما المودة والرحمة، فرحتنا لا توصف وبانتظار يوم ١١ نوفمبر في رأس البر!',
           ts: 1762000002000
         },
         {
           id: 'seed-3',
           name: 'Mariam & Youssef',
-          city: 'New Damietta',
           seal: '#D9A6AA',
           msg: 'ربنا يتمملكم على خير ويجعل أيامكم كلها سعادة وحب، منتظرين أجمل ليلة في العمر!',
           ts: 1762000003000
@@ -3558,8 +3368,10 @@
             var parsedCfg = JSON.parse(savedCfg);
             if (parsedCfg && typeof parsedCfg === 'object') {
               gbCloudConfig.cloudUrl = parsedCfg.cloudUrl || gbCloudConfig.cloudUrl;
-              gbCloudConfig.coupleWa = parsedCfg.coupleWa || gbCloudConfig.coupleWa;
             }
+          }
+          if (!gbCloudConfig.cloudUrl && GOOGLE_SHEETS_SCRIPT_URL) {
+            gbCloudConfig.cloudUrl = GOOGLE_SHEETS_SCRIPT_URL;
           }
           var raw = localStorage.getItem(GB_STORAGE_KEY);
           if (raw) {
@@ -3589,7 +3401,7 @@
           var it = combined[i];
           if (!it || !it.name || !it.msg) continue;
           if (typeof containsProfanityOrCatcalling === 'function' &&
-            (containsProfanityOrCatcalling(it.name) || containsProfanityOrCatcalling(it.city) || containsProfanityOrCatcalling(it.msg))) {
+            (containsProfanityOrCatcalling(it.name) || containsProfanityOrCatcalling(it.msg))) {
             continue;
           }
           var sig = entrySignature(it);
@@ -3598,7 +3410,6 @@
             out.push({
               id: it.id || ('gb-' + (it.ts || Date.now()) + '-' + i),
               name: String(it.name).trim(),
-              city: String(it.city || 'Honoured Guest').trim(),
               seal: it.seal || '#5A1828',
               msg: String(it.msg).trim(),
               ts: Number(it.ts) || Date.now()
@@ -3613,7 +3424,6 @@
         u.hash = '';
         var payload = {
           n: item.name,
-          c: item.city,
           s: item.seal,
           m: item.msg,
           t: item.ts || Date.now()
@@ -3629,7 +3439,7 @@
         var u = new URL(location.href);
         u.hash = '';
         var compact = guestbookEntries.slice(0, 25).map(function (it) {
-          return { n: it.name, c: it.city, s: it.seal, m: it.msg, t: it.ts || Date.now() };
+          return { n: it.name, s: it.seal, m: it.msg, t: it.ts || Date.now() };
         });
         try {
           u.searchParams.set('gb_all', btoa(unescape(encodeURIComponent(JSON.stringify(compact)))));
@@ -3686,27 +3496,19 @@
 
       function syncWithCloudEndpoint(newEntryOptional) {
         var url = (gbCloudConfig.cloudUrl || '').trim();
-        var dot = $('#gb-sync-dot');
-        var statusTxt = $('#gb-sync-status-text');
-        var countBadge = $('#gb-count-badge');
-        if (countBadge) countBadge.textContent = String(guestbookEntries.length);
+        if (!url) return Promise.resolve(false);
 
-        if (!url) {
-          if (dot) dot.style.background = '#16A34A';
-          if (statusTxt) {
-            statusTxt.innerHTML = 'محفوظ دائمًا على الجهاز + رابط مباشر للعروسين (<strong id="gb-count-badge">' + guestbookEntries.length + '</strong> تهنئة)';
-          }
-          return Promise.resolve(false);
-        }
-
-        if (dot) dot.style.background = '#D97706';
         var postPromise = Promise.resolve();
         if (newEntryOptional) {
+          var isGas = url.indexOf('script.google.com') !== -1;
           postPromise = fetch(url, {
             method: 'POST',
+            mode: isGas ? 'no-cors' : 'cors',
             headers: { 'Content-Type': 'text/plain;charset=utf-8' },
             body: JSON.stringify(newEntryOptional)
-          }).catch(function () { });
+          }).catch(function (err) {
+            console.warn('Sync post warning:', err);
+          });
         }
 
         return postPromise.then(function () {
@@ -3726,13 +3528,8 @@
             saveLocalGuestbook();
             renderGuestbook();
           }
-          if (dot) dot.style.background = '#16A34A';
-          if (statusTxt) {
-            statusTxt.innerHTML = '☁ متصل بالسحابة — يظهر للعروسين وجميع الضيوف (<strong id="gb-count-badge">' + guestbookEntries.length + '</strong> تهنئة)';
-          }
           return true;
         }).catch(function () {
-          if (dot) dot.style.background = '#DC2626';
           return false;
         });
       }
@@ -3814,7 +3611,7 @@
 
         ctx.fillStyle = '#C2A36B';
         ctx.font = 'italic 500 26px "Cormorant Garamond", serif';
-        ctx.fillText(item.city + '   •   11 . 11 . 2026   •   Marly Hall', 540, 912);
+        ctx.fillText('11 . 11 . 2026   •   رأس البر', 540, 912);
 
         var a = document.createElement('a');
         a.href = c.toDataURL('image/png');
@@ -3827,7 +3624,7 @@
       function sendWishToCoupleWhatsApp(item) {
         var wishUrl = buildWishShareUrl(item);
         var msgText = '💌 تهنئة مختومة للعروسين حسام & دينا (11.11.2026)\n' +
-          'من: ' + item.name + ' (' + item.city + ')\n' +
+          'من: ' + item.name + '\n' +
           '« ' + item.msg + ' »\n\n' +
           'اضغط هنا لفتح التهنئة وحفظها في سجل العروسين:\n' + wishUrl;
         var phone = String(gbCloudConfig.coupleWa || '').replace(/[^0-9]/g, '');
@@ -3841,72 +3638,81 @@
         var list = $('#gb-entries-list');
         if (!list) return;
         list.innerHTML = '';
-        var countBadge = $('#gb-count-badge');
-        if (countBadge) countBadge.textContent = String(guestbookEntries.length);
+        var gbCountEn = $('#gb-count-en');
+        if (gbCountEn) gbCountEn.textContent = String(guestbookEntries.length);
+        var gbCountAr = $('#gb-count-ar');
+        if (gbCountAr) gbCountAr.textContent = String(guestbookEntries.length);
 
         guestbookEntries.forEach(function (item) {
           var card = document.createElement('div');
           card.className = 'gb-entry';
           var av = document.createElement('div');
           av.className = 'gb-avatar';
-          av.style.backgroundColor = item.seal;
-          av.textContent = item.name.charAt(0);
+          av.style.backgroundColor = item.seal || '#5A1828';
+          av.textContent = (item.name || '').charAt(0) || '♥';
           var body = document.createElement('div');
           body.style.flex = '1';
           var head = document.createElement('div');
-          head.style.cssText = 'display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px;margin-bottom:4px';
+          head.style.cssText = 'display:flex;justify-content:space-between;align-items:center;margin-bottom:6px';
           var nm = document.createElement('strong');
           nm.style.color = '#5A1828';
+          nm.style.fontSize = '1.15rem';
           nm.textContent = item.name;
-          var ct = document.createElement('span');
-          ct.style.cssText = 'font-size:.82rem;color:#C2A36B';
-          ct.textContent = item.city;
+          var heart = document.createElement('span');
+          heart.style.cssText = 'font-size:.9rem;color:#C2A36B';
+          heart.textContent = '♥';
           head.appendChild(nm);
-          head.appendChild(ct);
+          head.appendChild(heart);
           var p = document.createElement('p');
-          p.style.cssText = 'color:#76283B;font-family:var(--f-ar);font-size:1.18rem;line-height:1.85;direction:rtl;text-align:right;margin-top:4px';
+          p.style.cssText = 'color:#76283B;font-family:var(--f-ar);font-size:1.15rem;line-height:1.8;direction:rtl;text-align:right;margin:0';
           p.textContent = '“' + item.msg + '”';
-
-          /* Per-entry actions so any wish can be sent to Bride & Groom or saved as a card */
-          var actRow = document.createElement('div');
-          actRow.className = 'gb-entry-actions';
-
-          var waBtn = document.createElement('button');
-          waBtn.type = 'button';
-          waBtn.className = 'gb-mini-btn';
-          waBtn.textContent = '📲 إرسال للعروسين';
-          waBtn.addEventListener('click', function () { sendWishToCoupleWhatsApp(item); });
-
-          var lnkBtn = document.createElement('button');
-          lnkBtn.type = 'button';
-          lnkBtn.className = 'gb-mini-btn';
-          lnkBtn.textContent = '🔗 رابط التهنئة';
-          lnkBtn.addEventListener('click', function () {
-            copyText(buildWishShareUrl(item)).then(function () {
-              toast('تم نسخ رابط التهنئة! عند فتحه لدى العروسين تُحفظ تلقائيًا في سجلهم');
-            });
-          });
-
-          var imgBtn = document.createElement('button');
-          imgBtn.type = 'button';
-          imgBtn.className = 'gb-mini-btn';
-          imgBtn.textContent = '🖼 بطاقة ذكرى';
-          imgBtn.addEventListener('click', function () {
-            downloadSingleWishCardPng(item);
-          });
-
-          actRow.appendChild(waBtn);
-          actRow.appendChild(lnkBtn);
-          actRow.appendChild(imgBtn);
 
           body.appendChild(head);
           body.appendChild(p);
-          body.appendChild(actRow);
           card.appendChild(av);
           card.appendChild(body);
           list.appendChild(card);
         });
       }
+
+      function exportGuestbookToExcel() {
+        if (!guestbookEntries || guestbookEntries.length === 0) {
+          toast(lang === 'ar' ? 'لا توجد تهاني مسجلة بعد' : 'No wishes recorded yet');
+          return;
+        }
+        var BOM = '\uFEFF';
+        var headers = lang === 'ar'
+          ? ['م', 'اسم المهنئ', 'نص التهنئة المباركة', 'تاريخ الإرسال', 'وقت الإرسال']
+          : ['#', 'Guest Name', 'Wedding Wish', 'Date', 'Time'];
+
+        var rows = [headers.map(function (h) { return '"' + String(h).replace(/"/g, '""') + '"'; }).join(',')];
+
+        guestbookEntries.forEach(function (item, idx) {
+          var dt = new Date(item.ts || Date.now());
+          var dStr = dt.toLocaleDateString('ar-EG');
+          var tStr = dt.toLocaleTimeString('ar-EG', { hour: '2-digit', minute: '2-digit' });
+          var r = [
+            String(idx + 1),
+            item.name || '',
+            item.msg || '',
+            dStr,
+            tStr
+          ];
+          rows.push(r.map(function (val) { return '"' + String(val).replace(/"/g, '""') + '"'; }).join(','));
+        });
+
+        var blob = new Blob([BOM + rows.join('\r\n')], { type: 'text/csv;charset=utf-8;' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'تهاني_حسام_ودينا_11_11_2026.csv';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 3000);
+        toast(lang === 'ar' ? '✅ تم تحميل ملف الإكسل بنجاح!' : '✅ Excel file downloaded successfully!');
+      }
+      window.exportGuestbookToExcel = exportGuestbookToExcel;
 
       $$('#gb-seal-picker .seal-chip').forEach(function (btn) {
         btn.addEventListener('click', function () {
@@ -4088,39 +3894,36 @@
       }
 
       function validateGuestbookFields() {
-        var nameIn = $('#gb-name'), cityIn = $('#gb-city'), msgIn = $('#gb-msg');
+        var nameIn = $('#gb-name'), msgIn = $('#gb-msg');
         var alertBox = $('#gb-filter-alert');
-        var badName = containsProfanityOrCatcalling(nameIn.value);
-        var badCity = containsProfanityOrCatcalling(cityIn.value);
-        var badMsg = containsProfanityOrCatcalling(msgIn.value);
+        var badName = nameIn ? containsProfanityOrCatcalling(nameIn.value) : false;
+        var badMsg = msgIn ? containsProfanityOrCatcalling(msgIn.value) : false;
 
-        nameIn.classList.toggle('is-flagged', badName);
-        cityIn.classList.toggle('is-flagged', badCity);
-        msgIn.classList.toggle('is-flagged', badMsg);
+        if (nameIn) nameIn.classList.toggle('is-flagged', badName);
+        if (msgIn) msgIn.classList.toggle('is-flagged', badMsg);
 
-        var anyBad = badName || badCity || badMsg;
-        alertBox.hidden = !anyBad;
+        var anyBad = badName || badMsg;
+        if (alertBox) alertBox.hidden = !anyBad;
         return !anyBad;
       }
 
-      $('#gb-name').addEventListener('input', validateGuestbookFields);
-      $('#gb-city').addEventListener('input', validateGuestbookFields);
-      $('#gb-msg').addEventListener('input', validateGuestbookFields);
+      if ($('#gb-name')) $('#gb-name').addEventListener('input', validateGuestbookFields);
+      if ($('#gb-msg')) $('#gb-msg').addEventListener('input', validateGuestbookFields);
 
       $('#gb-form').addEventListener('submit', function (e) {
         e.preventDefault();
-        var nameIn = $('#gb-name'), cityIn = $('#gb-city'), msgIn = $('#gb-msg');
+        var nameIn = $('#gb-name'), msgIn = $('#gb-msg');
+        if (!nameIn || !msgIn) return;
         if (!nameIn.value.trim() || !msgIn.value.trim()) return;
         if (!validateGuestbookFields()) {
           toast(lang === 'ar'
-            ? 'عذرًا، تحتوي الرسالة على ألفاظ غير لائقة أو معاكسات غير مسموح بها'
-            : 'Message blocked: profanity, slang insults, or catcalling detected');
+            ? 'عذرًا، تحتوي الرسالة على ألفاظ غير لائقة أو غير مسموح بها'
+            : 'Message blocked: inappropriate content detected');
           return;
         }
         var newWish = {
           id: 'wish-' + Date.now(),
           name: nameIn.value.trim(),
-          city: cityIn.value.trim() || (lang === 'ar' ? 'ضيف عزيز' : 'Honoured Guest'),
           seal: selectedSeal,
           msg: msgIn.value.trim(),
           ts: Date.now()
@@ -4133,9 +3936,9 @@
         }
         syncWithCloudEndpoint(newWish);
 
-        nameIn.value = ''; cityIn.value = ''; msgIn.value = '';
-        $('#gb-filter-alert').hidden = true;
-        $('#gb-delivery-banner').hidden = false;
+        nameIn.value = ''; msgIn.value = '';
+        var alertBox = $('#gb-filter-alert');
+        if (alertBox) alertBox.hidden = true;
         renderGuestbook();
         toast(T[lang].gbSaved);
       });
@@ -4150,120 +3953,20 @@
         });
       }
 
-      /* Post-submit direct delivery buttons */
-      $('#gb-deliver-wa-btn').addEventListener('click', function () {
-        var target = lastSubmittedWish || guestbookEntries[0];
-        if (target) sendWishToCoupleWhatsApp(target);
-      });
-      $('#gb-deliver-link-btn').addEventListener('click', function () {
-        var target = lastSubmittedWish || guestbookEntries[0];
-        if (!target) return;
-        copyText(buildWishShareUrl(target)).then(function () {
-          toast('تم نسخ رابط التهنئة الذكي! ابعته للعروسين ليُحفظ في سجلهم تلقائيًا');
-        });
-      });
-      $('#gb-deliver-card-btn').addEventListener('click', function () {
-        var target = lastSubmittedWish || guestbookEntries[0];
-        if (target) downloadSingleWishCardPng(target);
-      });
-
-      /* Sync, Export & Bride/Groom Cloud Setup Controls */
-      $('#gb-sync-now-btn').addEventListener('click', function () {
-        loadLocalGuestbook();
-        renderGuestbook();
-        syncWithCloudEndpoint().then(function (ok) {
-          toast(ok ? '☁ تمت المزامنة السحابية بنجاح!' : 'تم تحديث السجل المحفوظ! لربط Google Sheet للعروسين افتح ⚙ إعدادات العروسين');
-        });
-      });
-
-      $('#gb-export-btn').addEventListener('click', function () {
-        var lines = ['=== سجل تهاني زفاف حسام & دينا (11.11.2026 — قاعة مارلي) ===\n'];
-        guestbookEntries.forEach(function (it, idx) {
-          lines.push((idx + 1) + '. ' + it.name + ' (' + it.city + '):\n« ' + it.msg + ' »\n');
-        });
-        var blob = new Blob([lines.join('\n')], { type: 'text/plain;charset=utf-8' });
-        var a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'Hossam-Dina-Guestbook-Wishes.txt';
-        document.body.appendChild(a);
-        a.click();
-        setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 250);
-        toast('تم تحميل ملف كل التهاني للعروسين!');
-      });
-
-      $('#gb-cloud-setup-btn').addEventListener('click', function () {
-        var drawer = $('#gb-cloud-drawer');
-        $('#gb-cloud-url').value = gbCloudConfig.cloudUrl || '';
-        $('#gb-couple-wa').value = gbCloudConfig.coupleWa || '';
-        drawer.hidden = !drawer.hidden;
-      });
-      $('#gb-close-cloud-cfg-btn').addEventListener('click', function () {
-        $('#gb-cloud-drawer').hidden = true;
-      });
-      $('#gb-save-cloud-cfg-btn').addEventListener('click', function () {
-        gbCloudConfig.cloudUrl = $('#gb-cloud-url').value.trim();
-        gbCloudConfig.coupleWa = $('#gb-couple-wa').value.trim();
-        try {
-          localStorage.setItem(GB_CONFIG_KEY, JSON.stringify(gbCloudConfig));
-        } catch (e) { }
-        $('#gb-cloud-drawer').hidden = true;
-        syncWithCloudEndpoint();
-        toast('تم حفظ إعدادات استلام التهاني للعروسين!');
-      });
-
-      $('#gb-copy-all-sync-link-btn').addEventListener('click', function () {
-        copyText(buildAllWishesSyncUrl()).then(function () {
-          toast('🔗 تم نسخ رابط مزامنة السجل كاملًا! عند فتحه على أي جهاز تنتقل كل التهاني فورًا');
-        });
-      });
-
-      $('#gb-copy-gas-btn').addEventListener('click', function () {
-        var gasCode = [
-          '// كود Google Apps Script المربوط بجدول زفاف حسام ودينا (1QakC1YTmgq2HTeZIOapWBgh3dD7Xhol5X2uXBlkQlnM):',
-          'function doGet() {',
-          '  var ss = SpreadsheetApp.openById("1QakC1YTmgq2HTeZIOapWBgh3dD7Xhol5X2uXBlkQlnM");',
-          '  var s = ss.getSheets()[0];',
-          '  var rows = s.getDataRange().getValues().slice(1);',
-          '  var list = rows.reverse().map(function(r){ return {id:r[0], name:r[1], city:r[2], seal:r[3], msg:r[4], ts:r[5]}; });',
-          '  return ContentService.createTextOutput(JSON.stringify(list)).setMimeType(ContentService.MimeType.JSON);',
-          '}',
-          'function doPost(e) {',
-          '  var ss = SpreadsheetApp.openById("1QakC1YTmgq2HTeZIOapWBgh3dD7Xhol5X2uXBlkQlnM");',
-          '  var s = ss.getSheets()[0];',
-          '  if (s.getLastRow() === 0) s.appendRow(["ID","Name","City","Seal","Message","Timestamp"]);',
-          '  var d = JSON.parse(e.postData.contents);',
-          '  s.appendRow([d.id, d.name, d.city, d.seal, d.msg, d.ts]);',
-          '  return ContentService.createTextOutput(JSON.stringify({ok:true})).setMimeType(ContentService.MimeType.JSON);',
-          '}'
-        ].join('\n');
-        copyText(gasCode).then(function () {
-          toast('📋 تم نسخ كود Google Sheet المربوط بجدولكم! الصقه في Apps Script ثم Deploy > Anyone');
-        });
-      });
-
       /* Initialize Persistent Guestbook + Check for Shared Wish in URL */
       loadLocalGuestbook();
       importWishFromUrlIfPresent();
       syncWithCloudEndpoint();
 
-      var _scrollY = 0;
-      function openGuestbook() {
-        _scrollY = window.scrollY;
-        document.documentElement.classList.add('modal-open');
-        document.body.style.top = '-' + _scrollY + 'px';
-        $('#guestbook-modal').hidden = false;
-        // Reset modal scroll to top
-        $('#guestbook-modal').scrollTop = 0;
-      }
-      function closeGuestbook() {
-        $('#guestbook-modal').hidden = true;
-        document.documentElement.classList.remove('modal-open');
-        document.body.style.top = '';
-        window.scrollTo(0, _scrollY);
-      }
+      function openGuestbook() { $('#guestbook-modal').hidden = false; }
+      function closeGuestbook() { $('#guestbook-modal').hidden = true; }
       $('#guestbook-cta-btn').addEventListener('click', openGuestbook);
       $('#top-guestbook-btn').addEventListener('click', openGuestbook);
       $('#gb-close-btn').addEventListener('click', closeGuestbook);
+      var gbExcelBtn = $('#gb-export-excel-btn');
+      if (gbExcelBtn) {
+        gbExcelBtn.addEventListener('click', exportGuestbookToExcel);
+      }
       $('#guestbook-modal').addEventListener('click', function (e) {
         if (e.target === $('#guestbook-modal')) closeGuestbook();
       });
@@ -4275,11 +3978,11 @@
         if (type === 'photo') {
           box.innerHTML = '<p class="kicker">' + (lang === 'ar' ? 'طابع تذكاري خاص' : 'COLLECTOR POSTAGE STAMP') + '</p>' +
             '<h4 class="h2" style="font-size:2.3rem;margin-bottom:10px">' + (lang === 'ar' ? 'حسام &amp; دينا' : 'Hossam &amp; Dina') + '</h4>' +
-            '<p style="color:#76283B">' + (lang === 'ar' ? 'رحلة عمر تبدأ معكم يوم الأربعاء ١١ نوفمبر ٢٠٢٦ في قاعة مارلي.' : 'A timeless journey beginning Wednesday, 11 November 2026 at Marly Hall.') + '</p>';
+            '<p style="color:#76283B">' + (lang === 'ar' ? 'رحلة عمر تبدأ معكم يوم الأربعاء ١١ نوفمبر ٢٠٢٦ في رأس البر.' : 'A timeless journey beginning Wednesday, 11 November 2026 at رأس البر.') + '</p>';
         } else if (type === 'card') {
           box.innerHTML = '<p class="kicker">' + (lang === 'ar' ? 'بطاقة الدعوة' : 'SAVE THE DATE CARD') + '</p>' +
             '<h4 class="h2" style="font-size:2.5rem;margin-bottom:8px">' + (lang === 'ar' ? 'حسام &amp; دينا' : 'Hossam &amp; Dina') + '</h4>' +
-            '<p style="color:#76283B;font-size:1.2rem">' + (lang === 'ar' ? 'الأربعاء ١١ نوفمبر ٢٠٢٦ • الساعة ٦:٠٠ مساءً • قاعة مارلي' : 'Wednesday, 11 November 2026 • 6:00 PM • Marly Hall') + '</p>';
+            '<p style="color:#76283B;font-size:1.2rem">' + (lang === 'ar' ? 'الأربعاء ١١ نوفمبر ٢٠٢٦ • الساعة ٦:٠٠ مساءً • رأس البر' : 'Wednesday, 11 November 2026 • 6:00 PM • رأس البر') + '</p>';
         } else if (type === 'tag') {
           box.innerHTML = '<p class="kicker">11 · 11 · 2026</p>' +
             '<h4 class="h2" style="font-size:2.3rem;margin-bottom:12px">' + (lang === 'ar' ? 'احفظوا الموعد' : 'Reserve the Date') + '</h4>' +
@@ -4480,6 +4183,3 @@
 </body>
 
 </html>
-
-
-

@@ -1,0 +1,9 @@
+# Desktop system files & shortcuts
+*.lnk
+desktop.ini
+
+# Local helper files
+*.bat
+*.gs
+*.csv
+*.xlsx
